@@ -7,17 +7,17 @@ app.factory('Post', function(DS, $state) {
 		relations: {
 			belongsTo: {
 				users: {
-					localKey: 'authorId',
-					localField: 'author' 
+					localKey: 'author',
+					localField: '_author' 
 				} 
 			}
 		}, 
-		// functionality added to the prototype of every
+		// functionality added to the prototype of every instance
 		methods: {
 			go: function (){
 				$state.go('post', {
 					postId: this._id, 
-					authorId: this.authorId
+					authorId: this.author
 				})
 			}
 		}

@@ -18,11 +18,9 @@ app.config(function($stateProvider) {
 	})
 })
 
-app.controller('MainController', function($scope, posts) {
+app.controller('MainController', function($scope, posts, User) {
 
 	$scope.allPosts = posts;
-	console.log('posts: ', posts)
- 
-})
+ })
 
 

@@ -39,6 +39,7 @@ var app = angular.module('jsdataWorkshop', ['js-data', 'ui.router'])
     // }
 
   })
+  // this fix enables us to point the localField to the `actual` (hasOwnProperty) field 
   .config(function(DSProvider) {
     // Mongoose Relation Fix (fixes deserialization)
     // From http://plnkr.co/edit/3z90PD9wwwhWdnVrZqkB?p=preview
